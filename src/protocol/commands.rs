@@ -373,4 +373,9 @@ commands! {
         "qWasmGlobal" => _qWasmGlobal::qWasmGlobal,
         "qWasmStackValue" => _qWasmStackValue::qWasmStackValue,
     }
+
+    process_info {
+        "qHostInfo" => _qHostInfo::qHostInfo,
+        "qProcessInfo" => _qProcessInfo::qProcessInfo,
+    }
 }

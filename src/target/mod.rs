@@ -752,6 +752,12 @@ pub trait Target {
     fn support_wasm(&mut self) -> Option<ext::wasm::WasmOps<'_, Self>> {
         None
     }
+
+    /// Support for host and process information (qHostInfo / qProcessInfo).
+    #[inline(always)]
+    fn support_process_info(&mut self) -> Option<ext::process_info::ProcessInfoOps<'_, Self>> {
+        None
+    }
 }
 
 macro_rules! __delegate {
